@@ -1,3 +1,12 @@
+
+// import Root from '@page/index';
 export default [
-    { "path": "/", "component": require('@/pages/index'), "exact": false }
+    {
+        path: "/",
+        component: '@/pages/index',
+        exact: false,
+        routes: [
+            { path: '/book', component: '@/pages/Home/components/Book/index' }
+        ]
+    }
 ]

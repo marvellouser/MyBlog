@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import style from './style.less';
-import Head from '@/pages/components/Head/index';
-import Content from '@/pages/components/Content/index';
-// import { } from 
-export default function index() {
+import Head from './components/Head/index';
+import Content from './components/Content/index';
+export default function index(props) {
+    console.log(props.children);
     return (
         <div className={style['wrapper']}>
             <Head />
-            <Content />
+            <Content {...props} />
         </div>
     )
 }
